@@ -30,5 +30,5 @@ Languages and Tools:<br>
 <br>
 
 <p align="center">
-  <img src="https://srv-store1.gofile.io/download/f5a5f5b6-20b9-401a-8912-527136b26db7/298c565e1d66f648108cc2650a51d386.jpg"></img>
+  <img src="https://ibb.co/kKYdRSm"></img>
 </p>
