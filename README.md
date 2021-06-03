@@ -30,6 +30,5 @@ Languages and Tools:<br>
 <br>
 
 <p align="center">
-  <img src="https://i.ibb.co/tByd7JL/280ba5b6202259fbb5120baef55cb099.jpg" />
-  <img src="https://i.ibb.co/d5cCRkc/298c565e1d66f648108cc2650a51d386.jpg" />
+  <img src="https://i.ibb.co/rmTY70c/94fdea92b279464aa124110e8cf307b3.gif" />
 </p>
