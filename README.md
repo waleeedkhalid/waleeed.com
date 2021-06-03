@@ -4,12 +4,12 @@ Hi there, I'm KATO 👋
 ✨ Contact <br>
 - Discord  `Kato#0004`
 
-![](https://komarev.com/ghpvc/?username=Kato)
+![](https://komarev.com/ghpvc/?username=VamL4)
 
 <br>
 
 
-![github stats](https://github-readme-stats.vercel.app/api?username=Kato&count_private=true&show_icons=true&theme=dracula&hide=stars)
+![github stats](https://github-readme-stats.vercel.app/api?username=VamL4&count_private=true&show_icons=true&theme=dracula&hide=stars)
 
 ---
 
