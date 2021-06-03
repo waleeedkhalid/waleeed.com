@@ -30,5 +30,5 @@ Languages and Tools:<br>
 <br>
 
 <p align="center">
-  <img src="https://i.pinimg.com/originals/89/3e/90/893e90cd4bc934c0c248b586a246aaa6.gif"></img>
+  <img src="https://pin.it/6FbZ7ug"></img>
 </p>
