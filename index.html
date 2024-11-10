@@ -1,281 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>waleeed.info - Home</title>
+    <title>waleeed.com - Waleed Khalid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- normalize  -->
-    <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <!-- Font  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-items {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .whoami {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+        }
+
+        .primary-text h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .primary-text p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .langs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .lang-badge {
+            background: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .gitstats {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .gitstats img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .about, .projects, .contact {
+            padding: 3rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #007bff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-items {
+                gap: 1rem;
+            }
+
+            .primary-text h1 {
+                font-size: 2rem;
+            }
+
+            .primary-text p {
+                font-size: 1rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
-<body> 
+<body>
     <header class="header">
         <nav>
             <div class="container">
                 <div class="logo">
-                    <img src="./img/logo.png" alt="">
+                    <img src="img/logo.png" alt="Logo">
                 </div>
                 <ul class="nav-items">
-                    <li class="nav-links">
-                        <a href="">
-                            Home
-                        </a>
-                    </li>
-                <li class="nav-links">
-                    <a href="./projects.html">
-                        Projects
-                    </a>
-                </li>
-                    <li class="nav-links">
-                        <a href="">
-                            Contact
-                        </a>
-                    </li>
+                    <li class="nav-links"><a href="#about">About</a></li>
+                    <li class="nav-links"><a href="#projects">Projects</a></li>
+                    <li class="nav-links"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main class="main">
-        <div class="whoami">
-            <div class="avatar">
-                <img src="./img/logo.png" alt="avatar">
-            </div>
-            <div class="primary-text">
-                <h1>Welcome, I am Waleed</h1>
-                <p>
-                    Problem Solver, languages and tools<br>
-                    <div class="langs">
-                    </div>    
-                </p>
-
-                <div class="gitstats">
+        <section class="whoami">
+            <div class="container">
+                <div class="avatar">
+                    <img src="imgs/avatar.jpg" alt="Profile Picture">
+                </div>
+                <div class="primary-text">
+                    <h1>Waleed Khalid</h1>
+                    <p>Software Engineering Student at King Saud University</p>
+                    <div class="social-links">
+                        <a href="https://github.com/waleeedkhalid" target="_blank">
+                            <img src="imgs/github.svg" alt="GitHub" width="32" height="32">
+                        </a>
+                        <!-- href="https://linkedin.com/in/name" -->
+                        <a 
                         
-                    <svg
-                    width="495"
-                    height="170"
-                    viewBox="0 0 495 170"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <style>
-                      .header {
-                        font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-                        fill: #79dafa;
-                        animation: fadeInAnimation 0.8s ease-in-out forwards;
-                      }
-                      
-                .stat {
-                  font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #f8f8f2;
-                }
-                .stagger {
-                  opacity: 0;
-                  animation: fadeInAnimation 0.3s ease-in-out forwards;
-                }
-                .rank-text {
-                  font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f8f8f2; 
-                  animation: scaleInAnimation 0.3s ease-in-out forwards;
-                }
-                
-                .bold { font-weight: 700 }
-                .icon {
-                  fill: #79dafa;
-                  display: block;
-                }
-                
-                .rank-circle-rim {
-                  stroke: #79dafa;
-                  fill: none;
-                  stroke-width: 6;
-                  opacity: 0.2;
-                }
-                .rank-circle {
-                  stroke: #79dafa;
-                  stroke-dasharray: 250;
-                  fill: none;
-                  stroke-width: 6;
-                  stroke-linecap: round;
-                  opacity: 0.8;
-                  transform-origin: -10px 8px;
-                  transform: rotate(-90deg);
-                  animation: rankAnimation 1s forwards ease-in-out;
-                }
-                
-                @keyframes rankAnimation {
-                  from {
-                    stroke-dashoffset: 251.32741228718345;
-                  }
-                  to {
-                    stroke-dashoffset: 128.24404370509467;
-                  }
-                }
-              
-              
-            
-                      
-                /* Animations */
-                @keyframes scaleInAnimation {
-                  from {
-                    transform: translate(-5px, 5px) scale(0);
-                  }
-                  to {
-                    transform: translate(-5px, 5px) scale(1);
-                  }
-                }
-                @keyframes fadeInAnimation {
-                  from {
-                    opacity: 0;
-                  }
-                  to {
-                    opacity: 1;
-                  }
-                }
-              
-                      
-                    </style>
-            
-                    
-            
-                    <rect
-                      data-testid="card-bg"
-                      x="0.5"
-                      y="0.5"
-                      rx="4.5"
-                      height="99%"
-                      stroke="#e4e2e2"
-                      width="494"
-                      fill="#282a36"
-                      stroke-opacity="1"
-                    />
-            
-                    
-                  <g
-                    data-testid="card-title"
-                    transform="translate(25, 35)"
-                  >
-                    <g transform="translate(0, 0)">
-                  <text
-                    x="0"
-                    y="0"
-                    class="header"
-                    data-testid="header"
-                  >kato's GitHub Stats</text>
-                </g>
-                  </g>
-                
-            
-                    <g
-                      data-testid="main-card-body"
-                      transform="translate(0, 55)"
-                    >
-                      
-                <g data-testid="rank-circle" 
-                      transform="translate(400, 35)">
-                    <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
-                    <circle class="rank-circle" cx="-10" cy="8" r="40" />
-                    <g class="rank-text">
-                      <text
-                        x="-2"
-                        y="0"
-                        alignment-baseline="central"
-                        dominant-baseline="central"
-                        text-anchor="middle"
-                      >
-                        SSS+
-                      </text>
-                    </g>
-                  </g>
-            
-                <svg x="0" y="0">
-                  <g transform="translate(0, 0)">
-                <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
-                  
-                <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
-                </svg>
-              
-                  <text class="stat bold" x="25" y="12.5">Total Commits (2021):</text>
-                  <text 
-                    class="stat" 
-                    x="190" 
-                    y="12.5" 
-                    data-testid="commits"
-                  >999</text>
-                </g>
-              </g><g transform="translate(0, 25)">
-                <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
-                  
-                <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
-                </svg>
-              
-                  <text class="stat bold" x="25" y="12.5">Total PRs:</text>
-                  <text 
-                    class="stat" 
-                    x="190" 
-                    y="12.5" 
-                    data-testid="prs"
-                  >999</text>
-                </g>
-              </g><g transform="translate(0, 50)">
-                <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
-                  
-                <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/>
-                </svg>
-              
-                  <text class="stat bold" x="25" y="12.5">Total Issues:</text>
-                  <text 
-                    class="stat" 
-                    x="190" 
-                    y="12.5" 
-                    data-testid="issues"
-                  >999</text>
-                </g>
-              </g><g transform="translate(0, 75)">
-                <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
-                  
-                <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
-                </svg>
-              
-                  <text class="stat bold" x="25" y="12.5">Contributed to:</text>
-                  <text 
-                    class="stat" 
-                    x="190" 
-                    y="12.5" 
-                    data-testid="contribs"
-                  >999</text>
-                </g>
-              </g>
-                </svg> 
-              
-                    </g>
-                  </svg>
-                
-
+                        target="_blank">
+                            <img src="imgs/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+                <div class="langs">
+                    <span class="lang-badge">Java</span>
+                    <span class="lang-badge">Python</span>
+                    <span class="lang-badge">JavaScript</span>
+                    <span class="lang-badge">Swift</span>
+                </div>
+                <div class="gitstats">
+                    <img src="https://github-readme-stats.vercel.app/api?username=waleeedkhalid&show_icons=true&theme=radical" 
+                         alt="GitHub Stats">
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a passionate software engineering student at King Saud University, focusing on developing innovative solutions and learning cutting-edge technologies. My academic journey has equipped me with strong problem-solving skills and a deep understanding of software development principles.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>CSC113 Project</h3>
+                        <p>Description</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">View Project</a>
+                            <a href="#" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>SWE314 Project </h3>
+                        <p>Description/p>
+                        <div class="project-links">
+                            <a href="#" class="btn">View Project</a>
+                            <a href="#" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me through email at: <a href="mailto:me@waleeed.com">me@waleeed.com</a></p>
+            </div>
+        </section>
     </main>
 
-    <!-- FOOTER -->
-
     <footer class="footer">
-        <div class="container-foot">
-            <div class="author">
-                Made By Waleeed
-            </div>
+        <div class="container">
+            <p>&copy; 2024 Waleed Khalid - All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
+
