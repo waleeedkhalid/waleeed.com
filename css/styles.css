@@ -91,11 +91,23 @@ body {
     color: var(--text-color);
     cursor: pointer;
     padding: 10px;
-    transition: color var(--transition-duration) ease;
+    transition: transform 0.3s ease;
 }
 
 .mobile-menu-btn:hover {
     color: var(--primary-color);
+}
+
+.mobile-menu-btn.active {
+    transform: rotate(90deg);
+}
+
+.mobile-menu-btn i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn.active i {
+    transform: rotate(180deg);
 }
 
 .logo h1 {
@@ -416,16 +428,31 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn img {
-    width: clamp(16px, 3vw, 20px);
-    height: clamp(16px, 3vw, 20px);
+.btn i {
     margin-right: 8px;
+    font-size: clamp(16px, 3vw, 20px);
+    transition: transform var(--transition-duration) ease;
 }
 
 .btn:hover {
     background-color: #e0e0e0;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover i {
+    transform: scale(1.1);
+}
+
+.btn img {
+    width: clamp(16px, 3vw, 20px);
+    height: clamp(16px, 3vw, 20px);
+    margin-right: 8px;
+    transition: transform var(--transition-duration) ease;
+}
+
+.btn:hover img {
+    transform: scale(1.1);
 }
 
 .social-links {
