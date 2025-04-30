@@ -59,7 +59,7 @@
                             <a href="https://github.com/waleeedkhalid" target="_blank" class="btn" rel="noopener noreferrer">
                                 <img src="img/github.svg" alt="GitHub Icon" loading="lazy"> GitHub
                             </a>
-                            <a href="https://www.linkedin.com/in/waleedkhalid/" target="_blank" class="btn" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/w4leedkhalid/" target="_blank" class="btn" rel="noopener noreferrer">
                                 <img src="img/linkedin.svg" alt="LinkedIn Icon" loading="lazy"> LinkedIn
                             </a>
                         </div>
@@ -127,6 +127,9 @@
                             <a href="https://github.com/waleeedkhalid/calendar" target="_blank" class="btn" rel="noopener noreferrer">
                                 <img src="img/github.svg" alt="GitHub Icon" loading="lazy"> GitHub
                             </a>
+                            <a href="https://calendar.waleeed.com" target="_blank" class="btn" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Website
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -157,6 +160,7 @@
             
             mobileMenuBtn.addEventListener('click', function() {
                 navItems.classList.toggle('active');
+                this.classList.toggle('active');
                 const icon = this.querySelector('i');
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
@@ -166,6 +170,7 @@
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     navItems.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
